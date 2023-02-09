@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Pray Time</title>
+    <style>
+      body {
+        background-image: url('./img/back-img.png');
+        /* background-position: center top; */
+        background-repeat: no-repeat;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container mx-auto">
+        <nav class="nav">
+          <h1 class="text-center font-bold text-white text-4xl mt-[40px]">Namoz vaqtlari</h1>
+        </nav>
+        <hr class="mt-7">
+      <div class="flex flex-row">
+        <h3 class="text-white font-bold text-xl pl-[480px] mt-9">Hududni tanlang:</h3>
+        <select class="selectedRegion ml-20 rounded-md bg-transparent border border-solid text-white py-1 px-2 mt-8" name="region" id="region">
+          <option class="bg-white " value="Toshkent" selected id="tashkent">Tashkent</option>
+          <option class="bg-white text-blue-900 hover:bg-slate-300" value="Buxoro" id="buxoro">Buxoro</option>
+          <option class="bg-white text-blue-900 hover:bg-slate-300" value="Xiva" id="xiva">Xiva</option>
+          <option class="bg-white text-blue-900 hover:bg-slate-300" value="Namangan" id="namangan">Namangan</option>
+          <option class="bg-white text-blue-900 hover:bg-slate-300" value="Nukus" id="nukus">Nukus</option>
+          <option class="bg-white text-blue-900 hover:bg-slate-300" value="Qarshi" id="qarshi">Qarshi</option>
+          <option class="bg-white text-blue-900 hover:bg-slate-300" value="Denov" id="denov">Denov</option>
+          <option class="bg-white text-blue-900 hover:bg-slate-300" value="Andijon" id="andijon">Andijon</option>
+
+
+        </select>
+      </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="container mx-auto">
+          <div class="schedule w-full mt-16  flex flex-row"> 
+              <div class="continent">
+                <span class="text-xl font-bold text-[#fff]">Mintaqa : </span>
+                <span id="regionHtml" class="text-xl font-bold text-[#ffc700]">Toshkent shahri</span>
+              </div>
+              <div class="calendar items-center justify-center">
+                <i class='bx bxs-calendar text-white ml-96'></i>
+                <span class="date_namaz font-bold text-xl text-[#ffc700] ml-5"></span>
+                <span class="date_now date font-bold text-xl text-[#fff] ml-1"></span>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main">
+        <div class="mainclass mx-auto">
+          <div class="wrapper flex flex-row mt-20 justify-center gap-4">
+            <div class="bomdod flex flex-col bg-[#69696963] rounded-lg py-6 shadow-2xl">
+              <span class="font-bold text-2xl text-[#ffc700] text-center">Tong</span>
+              <img src="./img/isha-prayer 1.png" alt="isha">
+              <span class="font-bold text-white text-3xl text-center mt-10" id="morning">04:58</span>
+            </div>
+            <div class="sunrise flex flex-col bg-[#69696963] rounded-lg py-6 shadow-2xl">
+              <span class="font-bold text-2xl text-[#ffc700] text-center">Quyosh</span>
+              <img src="./img/sunrise.png" alt="sunrise">
+              <span class="font-bold text-white text-3xl text-center mt-8" id="sun">06:05</span>
+            </div>
+            <div class="flex flex-col bg-[#69696963] rounded-lg py-6 shadow-2xl">
+              <span class="font-bold text-2xl text-[#ffc700] text-center">Peshin</span>
+              <img src="./img/sun.png" alt="sun">
+              <span class="font-bold text-white text-3xl text-center" id="noon">12:38</span>
+            </div>
+            <div class="flex flex-col bg-[#69696963] rounded-lg py-6 shadow-2xl">
+              <span class="font-bold text-2xl text-[#ffc700] text-center">Asr</span>
+              <img src="./img/asr.png" alt="asr">
+              <span class="font-bold text-white text-3xl text-center mt-12" id="afternoon">16:38</span>
+            </div>
+            <div class="flex flex-col bg-[#69696963] rounded-lg py-6 shadow-2xl">
+              <span class="font-bold text-2xl text-[#ffc700] text-center">Shom</span>
+              <img src="./img/shom.png" alt="shom">
+              <span class="font-bold text-white text-3xl text-center mt-8" id="evening">17:38</span>
+            </div>
+            <div class="flex flex-col bg-[#69696963] rounded-lg py-6 shadow-2xl">
+              <span class="font-bold text-2xl text-[#ffc700] text-center">Xuftan</span>
+              <img class="mt-8" src="./img/huftan.png" alt="isha">
+              <span class="font-bold text-white text-3xl text-center mt-8" id="night">19:38</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <!-- script utils js -->
+  <script src="./utils/utils.js"></script>
+  <!-- script main.js -->
+  <script src="./script.js"></script>
+</html>
